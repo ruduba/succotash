@@ -1,27 +1,31 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-using namespace std;
-int main() {
-	 int n;
-	 cin>>n;
-	 set<int> levels;
-	  int q,y;
-	  cin>>q;
-	  for(int i=0;i<q;i++){
-		  int x;
-		  cin>>x;
-		  levels.insert(x);
-	  }
-	  cin>>y;
-	  for(int i=0;i<y;i++){
-		  int w;
-		  cin>>w;
-		  levels.insert(w);
-	  }
-	  if(levels.size()==n)
-		  cout<<"I become the guy.";
-	  else
-		  cout<<"Oh, my keyboard!";
-	return 0;
+int main(){
+    
+    int n, p, q;
+    cin>>n>>p;
+    
+    set<int> l;
+    
+    for(int i = 0; i<p; i++){
+        int tmp;
+        cin>>tmp;
+        l.insert(tmp);
+    }
+    
+    cin>>q;
+    for(int i = 0; i<q; i++){
+        int tmp;
+        cin>>tmp;
+        l.insert(tmp);
+    }
+    
+    if(l.size() == n){
+        cout<<"I become the guy.";
+    }else{
+        cout<<"Oh, my keyboard!";
+    }
+    
+    return 0;
 }
