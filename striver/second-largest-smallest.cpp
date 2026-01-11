@@ -35,4 +35,4 @@ int main(){
     
 }
 
-//O(n)
+// "TC: O(n), SC: O(1)"
