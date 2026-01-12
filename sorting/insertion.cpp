@@ -34,3 +34,5 @@ int main(){
     
     return 0;
 }
+
+// O(N) best, O(N^2) worst
