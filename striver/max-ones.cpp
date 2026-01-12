@@ -18,8 +18,6 @@ int main(){
     
     int mxOn = 0, cnt  = 0;
     
-
-    
     for(int i = 0; i<n; i++){
         if(ar.at(i) == 1){
 
@@ -35,3 +33,5 @@ int main(){
     cout<<mxOn;
     return 0;
 }
+
+// "TC: O(N), SC: O(1)"
