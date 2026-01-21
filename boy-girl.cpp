@@ -10,10 +10,10 @@ int main(){
   
   int tmp = unique(s.begin(), s.end()) -  s.begin();
   
-  if(tmp%2 == 0){
-      cout<<"CHAT WITH HER!";
-  }else{
+  if(tmp%2 != 0){
       cout<<"IGNORE HIM!";
+  }else{
+      cout<<"CHAT WITH HER!";
   }
   
   return 0;
