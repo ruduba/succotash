@@ -10,29 +10,32 @@ int main(){
         int n, q;
         cin>>n>>q;
         
-        vector<int> a(n);
-        vector<int> b(n);
-        for(auto &e: a){
-            cin>>e;
-        }
-        for(auto &e: b){
-            cin>>e;
+        vector<int> a(n+5);
+        vector<int> b(n+5);
+        int sum = 0, pref[n+5];
+        
+        for(int i = 1; i<=n; i++){
+            cin>>a[i];
         }
         
-        while(q--){
-            int l, r;
-            cin>>l>>r;
-            int sum = 0;
-            
-            
-            for(int i = l; i<=r; i++){
-                    
-                sum+= max(max(a[i], b[i]), max(a[i+1], b[i+1]));
-                
-            }
-                        
-            cout<<sum<<" ";
-            
+        for(int i = 1; i<=n; i++){
+            cin>>b[i];
+        }
+        
+        a[n+1] = 0;
+        
+        for(int i = n; i>0; i--) a[i] = max({a[i], a[i+1], b[i]});
+        
+        pref[0] = 0;
+        
+        for(int i = 1; i<=n; i++){
+            pref[i] = pref[i-1]+a[i];
+        }
+        
+        for(int i = 1; i<=q; i++){
+            int L, R;
+            cin>>L>>R;
+            cout<<pref[R]-pref[L-1]<<" ";
         }
         cout<<"\n";
     }
