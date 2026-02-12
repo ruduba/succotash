@@ -18,8 +18,7 @@ int main(){
           ans+=x;
         }
       }
-
-      cout<<ans<<" "<<t<<"\n";
+     cout<<ans<<"\n";
 
 
   }
