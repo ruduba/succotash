@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+bool cmp(int a, int b){
+    return a<b;
+}
+
 int main(){
     
     int t;
@@ -12,7 +16,7 @@ int main(){
             cin>>e;
         }
         
-        sort(m.begin(), m.end());
+        sort(m.begin(), m.end(), cmp);
         
         cout<<m[1]<<"\n";
         
