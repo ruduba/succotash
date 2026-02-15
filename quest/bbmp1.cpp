@@ -13,8 +13,6 @@ string yes(int n, string s){
   return ya;
 }
 
-
-
 int main(){
   int t;
   cin>>t;
@@ -29,7 +27,6 @@ int main(){
     string ans = yes(n, s);
     cout<<ans<<"\n";
   }
-
 
 return 0;
 }
